@@ -1,12 +1,16 @@
 package Feb_17;
 
 public class InheritanceActivity {
-	public static void main(String[] args) {
-		Manager m = new Manager (123456,"JAMBO","New YORK",909090,101010);//test case 1
-		Trainee t = new Trainee (654321,"BOLT","NETHERLAND",505050,707070);//test case 2
-		m.calcluateSalary();
-		m.calculatetransportAllowance();
-		t.calcluateSalary();
-		t.calculatetransportAllowance();
+	
+		public static void main(String[] args) {
+			//	test case 1
+			Manager man=new Manager (126534,"Peter","Chennai India",237844,65000);
+			man.calcluateSalary();
+			man.calculatetransportAllowance();
+			//	test case 2
+			Trainee tra=new Trainee(29846,"Jack","Mumbai India",442085,45000);
+			tra.calcluateSalary();
+			tra.calculatetransportAllowance();
+
+		}
 	}
-}
