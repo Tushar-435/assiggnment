@@ -1,26 +1,31 @@
-package Feb_25;
+package Feb_28;
 
-abstract class Bankaccount1 {
-	int accountnumber=4546463; 
-	int balance=4500;
-	abstract  void deposit(); 
-		abstract void withdraw(); 
-}
-class checkingAccount extends Bankaccount1 {
-	void deposit() {
-		int deposit=1000;
-		System.out.println("case deposit:" +" "+ (balance + deposit) );
+ interface Bankaccountinterface { // parent interface 
+	 
+	 void deposit(); // method
+	 void withdraw();
+ }
+ class CheckingAccount implements Bankaccountinterface { // child class
+
+	@Override
+	public void deposit() { // method
+		System.out.println("Case deposite");
 	}
-	void withdraw() {
-		int withdraw=5000;
-		System.out.println("case withdraw:"+" " + (balance-withdraw) );
-	}
-public class Bankaccount {
-	public static void main(String[] args) {
-		Bankaccount1 obj=new checkingAccount();
+	@Override
+	public void withdraw() {
+		System.out.println("Case withdraw");
+	}}
+	public class Bankaccount { // main class
+		public static void main(String[] args) { // main method
+			CheckingAccount obj=new CheckingAccount(); // creating object
+			obj.deposit();
+			obj.withdraw();
+		}
 		
-		 obj.withdraw();
-		 obj.deposit();
+		
+		
 	}
-}
-}
+
+	
+
+
